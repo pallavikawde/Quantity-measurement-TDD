@@ -1,2 +1,3 @@
 rootProject.name = 'QuantityMeasurement2'
+include 'java'
 

@@ -1,37 +1,19 @@
 package com.bridgelabs;
 
-public class Length {
+    public enum Length implements MeasurementUnits {
+        CENTI_METER(1 / 2.5), INCH(1), FEET(12), YARD(36);
 
-    private final double value;
-    private final Unit unit;
+        public final double baseUnitConversion;
 
-    public Length(Unit unit, double value) {
-        this.unit = unit;
-        this.value = value;
+        Length(double baseUnitConversion) {
+            this.baseUnitConversion = baseUnitConversion;
+        }
+
+        @Override
+        public double convertToBaseUnit(QuantityMeasurementSystem obj) {
+            return obj.value * baseUnitConversion;
+        }
     }
-
-    public Double unitConversion(double value, Unit temperature) {
-        return Unit.celTofah(value, temperature);
-    }
-
-    public boolean compare(Length l2) {
-        return Unit.compare(this.value, this.unit, l2.value, l2.unit);
-    }
-
-    public double add(Length l2) {
-        return Unit.add(this.value, this.unit, l2.value, l2.unit);
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Length length = (Length) o;
-        return Double.compare(length.value, value) == 0 && unit == length.unit;
-    }
-
-}
-
 
 
 

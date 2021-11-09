@@ -1,2 +1,8 @@
-Com/bridgelabs/QuantityMeasurementTest.java
- Com.bridgelabs.QuantityMeasurementTest
+com/bridgelabs/WeightMeasurementTest.java
+ com.bridgelabs.WeightMeasurementTest
+com/bridgelabs/VolumeMeasurementTest.java
+ com.bridgelabs.VolumeMeasurementTest
+com/bridgelabs/QuantityMeasurementSystemMeasurementTest.java
+ com.bridgelabs.QuantityMeasurementSystemMeasurementTest
+com/bridgelabs/LengthMeasurementTest.java
+ com.bridgelabs.LengthMeasurementTest
